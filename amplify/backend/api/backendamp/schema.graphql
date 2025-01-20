@@ -1,0 +1,27 @@
+type User @model @auth(rules: [{ allow: owner, provider: oidc }]) {
+  id: ID!
+  username: String!
+  email: String!
+  orders: [Order] @hasMany(indexName: "byUser", fields: ["id"])
+}
+
+type Order @model @auth(rules: [
+  { allow: owner, provider: oidc },
+  { allow: groups, groups: ["Admin"], provider: oidc }
+]) {
+  id: ID!
+  userId: ID! @index(name: "byUser") # Define the byUser index here
+  user: User @belongsTo(fields: ["userId"])
+  products: [Product] @manyToMany(relationName: "OrderProducts")
+  totalAmount: Float!
+  createdAt: AWSDateTime
+}
+
+type Product @model @auth(rules: [{ allow: owner, provider: oidc }]) {
+  id: ID!
+  name: String!
+  description: String
+  price: Float!
+  inStock: Boolean!
+  orders: [Order] @manyToMany(relationName: "OrderProducts")
+}

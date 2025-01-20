@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-backendamp-dev-b7948-authRole",
+      "UnauthRoleArn": "arn:aws:iam::586794468645:role/amplify-backendamp-dev-b7948-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::586794468645:role/amplify-backendamp-dev-b7948-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-backendamp-dev-b7948-deployment",
+      "UnauthRoleName": "amplify-backendamp-dev-b7948-unauthRole",
+      "StackName": "amplify-backendamp-dev-b7948",
+      "StackId": "arn:aws:cloudformation:us-east-1:586794468645:stack/amplify-backendamp-dev-b7948/db11c5c0-d61f-11ef-9897-0afffa5bdc03",
+      "AmplifyAppId": "d34hz3t8v2dw0b"
+    },
+    "categories": {
+      "auth": {
+        "backendamp70b9595c": {}
+      },
+      "api": {
+        "backendamp": {}
+      }
+    }
+  }
+}

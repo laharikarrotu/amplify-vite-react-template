@@ -1,0 +1,15 @@
+projects:
+  backendamp:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - resource
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: API
+        docsFilePath: .
+extensions:
+  amplify:
+    version: 3

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "backendamp",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "OPENID_CONNECT",
+      "openIDProviderName": "auth0",
+      "openIDIssuerURL": "https://dev-t0s067pnrpcdsto8.us.auth0.com/api/v2/",
+      "openIDClientID": "Uul2MSBfb90Un27K8mNu2265b8SchStc",
+      "openIDAuthTTL": "7200",
+      "openIDIatTTL": "86400"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 300,
+        "apiKeyExpirationDate": "2025-11-16T01:07:39.778Z",
+        "keyDescription": "Temporary api key"
+      }
+    ]
+  }
+}
